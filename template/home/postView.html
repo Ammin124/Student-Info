@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}
+    Post View
+{% endblock %}
+
+{% block contant %}
+    <div class="container">
+        <div style="text-align: center">
+            <br>
+            <h2>Student: {{ students.firstName }} {{ students.lastName }}</h2>
+            <br>
+        </div>
+        <div class="card col-md-4 offset-md-4">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Student Number: {{ students.studentNumber }}</li>
+                <li class="list-group-item">First Name: {{ students.firstName }}</li>
+                <li class="list-group-item">Last Name: {{ students.lastName }}</li>
+                <li class="list-group-item">Email: {{ students.email }}</li>
+                <li class="list-group-item">Study Of Field: {{ students.studyField }}</li>
+                <li class="list-group-item">CGPA: {{ students.gpa }}</li>
+            </ul>
+        </div>
+        <div class="col-md-4 offset-md-4 mt-2">
+            <a class="btn btn-warning me-1 " href="{% url 'edit' students.id %}">Edit</a>
+            <a class="btn btn-warning me-1 " href="{% url 'delete' students.id %}" >Delete</a>
+        </div>
+    </div>
+{% endblock %}

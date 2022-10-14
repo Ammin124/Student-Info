@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %}
+    Home page
+{% endblock %}
+
+{% block contant %}
+    <div class="container-xl">
+        <div class="row">
+            <div class="col-12">
+                {% if students %}
+                    <div class="card border-light ms-4 me-4 md-4">
+                        <div class="card-header mt-2"> <i class="fa-solid fa-lightbulb-cfl"></i> All Student</div>
+                        <div class="card-bodmt-2
+                            <div class="card-text">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Student Number</th>
+                                                <th scope="col">First Name</th>
+                                                <th scope="col">Last Name</th>
+                                                <th scope="col">Email</th>
+                                                <th scope="col">Field Of Study</th>
+                                                <th scope="col">GPA</th>
+                                                <th scope="col">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for student in students %}
+                                                <tr>
+                                                    <td>{{ student.studentNumber }}</td>
+                                                    <td>{{ student.firstName }}</td>
+                                                    <td>{{ student.lastName }}</td>
+                                                    <td>{{ student.email }}</td>
+                                                    <td>{{ student.studyField }}</td>
+                                                    <td>{{ student.gpa }}</td>
+                                                    <td>
+                                                        <a target="_blank" href="{% url 'postView' student.id %}">
+                                                            <button type="button" class="btn btn-success"> View  </button>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <h4 class="alert alert-primary ms-4 me-4"> No Student Data .</h4>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,1 @@
+web: gunicorn studentinfo.wsgi application --log -file-
