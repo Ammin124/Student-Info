@@ -28,3 +28,4 @@ In this project, I am creating a students database.Here I have shown each studen
  ## Delete:
 
 ![08](https://user-images.githubusercontent.com/104270991/195968205-cf81f78d-4199-4a24-9781-d7a56a8f2b4c.png)
+![09](https://user-images.githubusercontent.com/104270991/195968309-25954eb1-ca1a-4d2c-a24d-ef42948d88ea.png)
