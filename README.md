@@ -21,5 +21,8 @@ In this project, I am creating a students database.Here I have shown each studen
 
 ## Update Informations 
 
+![05](https://user-images.githubusercontent.com/104270991/195967975-98a0dc6c-ef48-485d-b6d8-5269eab15538.png)
+
 ## Delete
+ 
 
